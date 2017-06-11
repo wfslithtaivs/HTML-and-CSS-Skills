@@ -1,11 +1,95 @@
 <!doctype html>
 <html>
-<head>
-    <title>Application Form</title>
-</head>
-<body>
+    <head>
+        <title>Application Form</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+        <!--Change the background color of all of the form input boxes and submit button to be yellow.-->
+        <link href="styles.css" rel="stylesheet">
+    </head>
 
-<!-- your html goes here -->
+    <body>
+    <!--The page should have a large heading and some explanatory text, as well.-->
+        <div class="container">
+          <div class="page-header">
+            <h1>Ubermelon Job Application</h1>
+            <h3>Welcome to Ubermelon application process</h3>
+           </div>
 
-</body>
+           <div class="row">
+                <div class="col-xs-6 centered-text">
+                    <p class="bg-info">Please, fill out following fields to start our wonderful journey in the world Programmable Melon World:</p>
+                </div>
+                <div class="col-xs-6">
+                      <blockquote>
+                            <p> "We know what we are but know not what we may be."</p>
+                            <footer>Hamlet</footer>
+                        </blockquote>
+                </div>
+            </div>
+            <hr>
+            <!--A form that asks the user for onput and submit request -->
+        <!--to the URL path /application-success. This should be a POST request. -->
+                <form action="application-success", method="post">
+                    <!--their first and last name (as separate fields),-->
+                    <div class="form-group">
+                      <label>First name
+                        <input type="text"
+                               class="form-control"
+                               name="firstname"
+                               placeholder="Enter your name">
+                      </label>
+                     <label>Last name
+                        <input type="text"
+                               class = "form-control"
+                                name="lastname"
+                                placeholder="Enter your last name">
+                    </label>
+                </div>
+
+                      <!--their salary requirement as a number, and-->
+                     <div class="form-group">
+                         <label>Please, provide your salary expectations:
+                             <input type="number"
+                                    class="form-control"
+                                    name="salary_wanted"
+                                    placeholder="Type or select number">
+                         </label>
+                     </div>
+                      <!--which job they are applying for, as a dropdown from a list of:-->
+                          <!--Software Engineer-->
+                          <!--QA Engineer-->
+                          <!--Product Manager-->
+                    <div class="form-group">
+                        <label> Please, select what job you are applying for
+                            <select class="form-control">
+                             <option disabled selected>---Choose position---</option>
+                             <optgroup label="Engineering positions">
+                                <option name="se">Software Engineer</option>
+                                <option name="qa">QA Engineer</option>
+                             </optgroup>
+                            <optgroup label="Management">
+                                <option name="pm">Product Manager</option>
+                            </optgroup>
+                            </select>
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                    <input type="reset">
+                </form>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p><span class="text-info">If you have any questions, please, contact our Chief Baloonicorn of Magic Valley Administration via e-mail: <mark>dontbotherme@thankyou.com</mark>.</span></p>
+                    </div>
+                    <div class="col-xs-6"></div>
+                </div>
+            </div>
+    </body>
 </html>
